@@ -10,7 +10,7 @@ const fuzzyMatch = (drivers, string) => {
     let splitDriver = driver.split('');
 
     let splitString = string.split('');
-    console.log()
+    console.log(driver.slice(0, ))
     // return splitDriver[0] === splitString[0];
   })
 }
