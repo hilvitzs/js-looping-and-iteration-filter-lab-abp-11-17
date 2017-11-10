@@ -5,14 +5,21 @@ function findMatching(drivers, string) {
   })
 }
 
-const fuzzyMatch = (drivers, string) => {
-  return drivers.filter(driver => {
-    let splitDriver = driver.split('');
+// const fuzzyMatch = (drivers, string) => {
+//   return drivers.filter(driver => {
+//     let splitDriver = driver.split('');
+//
+//     let splitString = string.split('');
+//
+//     return splitDriver[0] === splitString[0];
+//   })
+// }
 
-    let splitString = string.split('');
-    console.log(driver.slice(0, ))
-    // return splitDriver[0] === splitString[0];
-  })
+function fuzzyMatch (list, partialName) {
+  let lengthOfName = partialName.length;
+  return list.filter(function (driverName) {
+    return driverName.slice(0, lengthOfName) === partialName;
+  });
 }
 
 function matchName(drivers, string) {
